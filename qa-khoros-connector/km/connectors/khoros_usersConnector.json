@@ -44,7 +44,7 @@
       {
         "type": "JSON",
         "header": "Khoros User Icon",
-        "path": "user_icon"
+        "path": "avatar"
       },
       {
         "type": "JSON",
@@ -87,7 +87,11 @@
     {
       "field": "khoros_userFavicon",
       "header": "Khoros User Icon",
-      "subfieldPath": []
+      "subfieldPath": [
+        {
+          "name": "favicon"
+        }
+      ]
     },
     {
       "field": "firstName",
