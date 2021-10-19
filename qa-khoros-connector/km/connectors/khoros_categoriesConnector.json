@@ -58,6 +58,18 @@
       }
     ]
   },
+  "transforms": [
+    {
+      "formatDates": {
+        "inputHeaders": {
+          "headers": [
+            "Creation Date"
+          ]
+        },
+        "inputFormat": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSXXX"
+      }
+    }
+  ],
   "mappings": [
     {
       "field": "entityId",
