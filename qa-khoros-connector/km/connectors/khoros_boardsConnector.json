@@ -1,0 +1,107 @@
+{
+  "$id": "khoros_boardsConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v2",
+  "displayName": "Khoros Boards Connector",
+  "entityType": "khoros_board",
+  "source": {
+    "sourceConfig": {
+      "apiPushConfig": {
+        "app": "61666",
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "Entity Container",
+      "path": "boards"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "Entity ID",
+        "path": "id"
+      },
+      {
+        "type": "JSON",
+        "header": "Name",
+        "path": "title"
+      },
+      {
+        "type": "JSON",
+        "header": "Views",
+        "path": "views"
+      },
+      {
+        "type": "JSON",
+        "header": "Landing Page",
+        "path": "view_href"
+      },
+      {
+        "type": "JSON",
+        "header": "Description",
+        "path": "description"
+      },
+      {
+        "type": "JSON",
+        "header": "Discussion Style",
+        "path": "conversation_style"
+      },
+      {
+        "type": "JSON",
+        "header": "Depth",
+        "path": "depth"
+      },
+      {
+        "type": "JSON",
+        "header": "Category ID",
+        "path": "parent_category.id"
+      }
+    ]
+  },
+  "mappings": [
+    {
+      "field": "entityId",
+      "header": "Entity ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_views",
+      "header": "Views",
+      "subfieldPath": []
+    },
+    {
+      "field": "landingPageUrl",
+      "header": "Landing Page",
+      "subfieldPath": []
+    },
+    {
+      "field": "description",
+      "header": "Description",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_discussionStyle",
+      "header": "Discussion Style",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_depth",
+      "header": "Depth",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_category",
+      "header": "Category ID",
+      "subfieldPath": []
+    }
+  ],
+  "scheduleConfig": {
+    "useSourceSchedule": true,
+    "runMode": "DEFAULT"
+  }
+}

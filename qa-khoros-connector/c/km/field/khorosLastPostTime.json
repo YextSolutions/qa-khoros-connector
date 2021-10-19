@@ -1,0 +1,11 @@
+{
+  "$id": "khoros_lastPostTime",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Khoros Last Post Time",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "dateType": {}
+  },
+  "typeId": "date"
+}

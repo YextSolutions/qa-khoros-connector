@@ -1,0 +1,13 @@
+{
+  "$id": "khoros_discussionThread",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Khoros Discussion Thread",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "listType": {
+      "typeId": "khoros_message"
+    }
+  },
+  "typeId": "list"
+}

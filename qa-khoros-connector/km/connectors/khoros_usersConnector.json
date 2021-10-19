@@ -1,0 +1,107 @@
+{
+  "$id": "khoros_usersConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v2",
+  "displayName": "Khoros Users Connector",
+  "entityType": "khoros_user",
+  "source": {
+    "sourceConfig": {
+      "apiPushConfig": {
+        "app": "61666",
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "Entity Container",
+      "path": "users"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "Entity ID",
+        "path": "id"
+      },
+      {
+        "type": "JSON",
+        "header": "Name",
+        "path": "title"
+      },
+      {
+        "type": "JSON",
+        "header": "Views",
+        "path": "views"
+      },
+      {
+        "type": "JSON",
+        "header": "Landing Page",
+        "path": "view_href"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Username",
+        "path": "username"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros User Icon",
+        "path": "user_icon"
+      },
+      {
+        "type": "JSON",
+        "header": "First Name",
+        "path": "firstName"
+      },
+      {
+        "type": "JSON",
+        "header": "Last Name",
+        "path": "lastName"
+      }
+    ]
+  },
+  "mappings": [
+    {
+      "field": "entityId",
+      "header": "Entity ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "landingPageUrl",
+      "header": "Landing Page",
+      "subfieldPath": []
+    },
+    {
+      "field": "emails",
+      "header": "Views",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_username",
+      "header": "Khoros Username",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_userFavicon",
+      "header": "Khoros User Icon",
+      "subfieldPath": []
+    },
+    {
+      "field": "firstName",
+      "header": "First Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "lastName",
+      "header": "Last Name",
+      "subfieldPath": []
+    }
+  ],
+  "scheduleConfig": {
+    "useSourceSchedule": true,
+    "runMode": "DEFAULT"
+  }
+}

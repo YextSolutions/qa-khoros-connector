@@ -1,0 +1,16 @@
+{
+  "$id": "khoros_board",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Khoros Board",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "listType": {
+      "typeId": "entityReference",
+      "type": {
+        "entityReferenceType": {}
+      }
+    }
+  },
+  "typeId": "list"
+}

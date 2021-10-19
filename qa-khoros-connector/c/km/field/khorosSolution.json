@@ -1,0 +1,8 @@
+{
+  "$id": "khoros_solution",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Solution",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "typeId": "khoros_message"
+}
