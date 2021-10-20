@@ -1,0 +1,416 @@
+{
+  "$id": "khoros_conversationsConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v2",
+  "displayName": "Khoros Conversations Connector",
+  "entityType": "khoros_conversation",
+  "source": {
+    "sourceConfig": {
+      "apiPushConfig": {
+        "app": "241765",
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "Entity Container",
+      "path": "conversations"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "Conversation ID",
+        "path": "id"
+      },
+      {
+        "type": "JSON",
+        "header": "Name",
+        "path": "subject"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Discussion Landing Page",
+        "path": "view_href"
+      },
+      {
+        "type": "JSON",
+        "header": "Conversation Style",
+        "path": "style"
+      },
+      {
+        "type": "JSON",
+        "header": "Board",
+        "path": "boardId"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Discussion Thread Body",
+        "path": "discussion_thread[*].body"
+      },
+      {
+        "type": "JSON",
+        "header": "Last Post Time",
+        "path": "last_post_time"
+      },
+      {
+        "type": "JSON",
+        "header": "Message Count",
+        "path": "message_count"
+      },
+      {
+        "type": "JSON",
+        "header": "Solved",
+        "path": "solved"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Discussion Thread Author URL",
+        "path": "discussion_thread[*].author_url"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Discussion Thread Author Username",
+        "path": "discussion_thread[*].author_username"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Discussion Thread Post Time",
+        "path": "discussion_thread[*].post_time"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Discussion Thread Depth",
+        "path": "discussion_thread[*].depth"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Discussion Thread Solution",
+        "path": "discussion_thread[*].is_solution"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Discussion Thread Views",
+        "path": "discussion_thread[*].metrics.views"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Topic Body",
+        "path": "topic.body"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Topic Author Username",
+        "path": "topic.author.login"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Topic Author URL",
+        "path": "topic.author.view_href"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Topic Post Time",
+        "path": "topic.post_time"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Topic Depth",
+        "path": "topic.depth"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Topic Solution ",
+        "path": "topic.is_solution"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Topic Views ",
+        "path": "topic.metrics.views"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Solution Body",
+        "path": "solution.body"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Solution Author Username",
+        "path": "solution.author.login"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Solution Author URL",
+        "path": "solution.author.view_href"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Solution Post Time",
+        "path": "solution.post_time"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Solution Depth",
+        "path": "solution.depth"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Solution Solution ",
+        "path": "solution.is_solution"
+      },
+      {
+        "type": "JSON",
+        "header": "Khoros Solution Views ",
+        "path": "solution.metrics.views"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "formatDates": {
+        "inputHeaders": {
+          "headers": [
+            "Last Post Time",
+            "Khoros Discussion Thread Post Time",
+            "Khoros Topic Post Time",
+            "Khoros Solution Post Time"
+          ]
+        },
+        "inputFormat": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSXXX"
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "field": "khoros_discussionThread",
+      "header": "Khoros Discussion Thread Solution",
+      "subfieldPath": [
+        {
+          "name": "solution"
+        }
+      ]
+    },
+    {
+      "field": "khoros_discussionLandingPage",
+      "header": "Khoros Discussion Landing Page",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_solution",
+      "header": "Khoros Solution Views ",
+      "subfieldPath": [
+        {
+          "name": "views"
+        }
+      ]
+    },
+    {
+      "field": "khoros_discussionThread",
+      "header": "Khoros Discussion Thread Post Time",
+      "subfieldPath": [
+        {
+          "name": "postTime"
+        }
+      ]
+    },
+    {
+      "field": "khoros_lastPostTime",
+      "header": "Last Post Time",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_solution",
+      "header": "Khoros Solution Author URL",
+      "subfieldPath": [
+        {
+          "name": "authorURL"
+        }
+      ]
+    },
+    {
+      "field": "name",
+      "header": "Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_firstKhorosMessage",
+      "header": "Khoros Topic Post Time",
+      "subfieldPath": [
+        {
+          "name": "postTime"
+        }
+      ]
+    },
+    {
+      "field": "khoros_solution",
+      "header": "Khoros Solution Post Time",
+      "subfieldPath": [
+        {
+          "name": "postTime"
+        }
+      ]
+    },
+    {
+      "field": "khoros_board",
+      "header": "Board",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_discussionStyle",
+      "header": "Conversation Style",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_solved",
+      "header": "Solved",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_firstKhorosMessage",
+      "header": "Khoros Topic Author Username",
+      "subfieldPath": [
+        {
+          "name": "authorUsername"
+        }
+      ]
+    },
+    {
+      "field": "khoros_solution",
+      "header": "Khoros Solution Author Username",
+      "subfieldPath": [
+        {
+          "name": "authorUsername"
+        }
+      ]
+    },
+    {
+      "field": "khoros_discussionThread",
+      "header": "Khoros Discussion Thread Views",
+      "subfieldPath": [
+        {
+          "name": "views"
+        }
+      ]
+    },
+    {
+      "field": "khoros_firstKhorosMessage",
+      "header": "Khoros Topic Author URL",
+      "subfieldPath": [
+        {
+          "name": "authorURL"
+        }
+      ]
+    },
+    {
+      "field": "khoros_firstKhorosMessage",
+      "header": "Khoros Topic Depth",
+      "subfieldPath": [
+        {
+          "name": "depth"
+        }
+      ]
+    },
+    {
+      "field": "khoros_solution",
+      "header": "Khoros Solution Depth",
+      "subfieldPath": [
+        {
+          "name": "depth"
+        }
+      ]
+    },
+    {
+      "field": "khoros_messageCount",
+      "header": "Message Count",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_firstKhorosMessage",
+      "header": "Khoros Topic Body",
+      "subfieldPath": [
+        {
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "field": "khoros_discussionThread",
+      "header": "Khoros Discussion Thread Author URL",
+      "subfieldPath": [
+        {
+          "name": "authorURL"
+        }
+      ]
+    },
+    {
+      "field": "khoros_solution",
+      "header": "Khoros Solution Body",
+      "subfieldPath": [
+        {
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "field": "entityId",
+      "header": "Conversation ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "khoros_discussionThread",
+      "header": "Khoros Discussion Thread Body",
+      "subfieldPath": [
+        {
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "field": "khoros_discussionThread",
+      "header": "Khoros Discussion Thread Depth",
+      "subfieldPath": [
+        {
+          "name": "depth"
+        }
+      ]
+    },
+    {
+      "field": "khoros_solution",
+      "header": "Khoros Solution Solution ",
+      "subfieldPath": [
+        {
+          "name": "solution"
+        }
+      ]
+    },
+    {
+      "field": "khoros_firstKhorosMessage",
+      "header": "Khoros Topic Solution ",
+      "subfieldPath": [
+        {
+          "name": "solution"
+        }
+      ]
+    },
+    {
+      "field": "khoros_firstKhorosMessage",
+      "header": "Khoros Topic Views ",
+      "subfieldPath": [
+        {
+          "name": "views"
+        }
+      ]
+    },
+    {
+      "field": "khoros_discussionThread",
+      "header": "Khoros Discussion Thread Author Username",
+      "subfieldPath": [
+        {
+          "name": "authorUsername"
+        }
+      ]
+    }
+  ],
+  "scheduleConfig": {
+    "useSourceSchedule": true,
+    "runMode": "DEFAULT"
+  }
+}
