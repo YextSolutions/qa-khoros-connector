@@ -43,11 +43,6 @@
       },
       {
         "type": "JSON",
-        "header": "Khoros Discussion Style",
-        "path": "conversation_style"
-      },
-      {
-        "type": "JSON",
         "header": "Depth",
         "path": "depth"
       },
