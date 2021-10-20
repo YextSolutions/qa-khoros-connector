@@ -19,7 +19,7 @@
       {
         "type": "JSON",
         "header": "Entity ID",
-        "path": "conversation.id"
+        "path": "id"
       },
       {
         "type": "JSON",
