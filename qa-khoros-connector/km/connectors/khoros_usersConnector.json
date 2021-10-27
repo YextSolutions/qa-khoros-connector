@@ -70,7 +70,7 @@
       "subfieldPath": []
     },
     {
-      "field": "email",
+      "field": "emails",
       "header": "Email",
       "subfieldPath": []
     },
