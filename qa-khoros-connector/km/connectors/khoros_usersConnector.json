@@ -24,7 +24,7 @@
       {
         "type": "JSON",
         "header": "Name",
-        "path": "title"
+        "path": "login"
       },
       {
         "type": "JSON",
@@ -35,11 +35,6 @@
         "type": "JSON",
         "header": "Landing Page",
         "path": "view_href"
-      },
-      {
-        "type": "JSON",
-        "header": "Khoros Username",
-        "path": "username"
       },
       {
         "type": "JSON",
