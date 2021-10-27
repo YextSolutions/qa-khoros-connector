@@ -28,8 +28,8 @@
       },
       {
         "type": "JSON",
-        "header": "Views",
-        "path": "views"
+        "header": "Email",
+        "path": "email"
       },
       {
         "type": "JSON",
@@ -44,12 +44,12 @@
       {
         "type": "JSON",
         "header": "First Name",
-        "path": "firstName"
+        "path": "first_name"
       },
       {
         "type": "JSON",
         "header": "Last Name",
-        "path": "lastName"
+        "path": "last_name"
       }
     ]
   },
@@ -70,8 +70,8 @@
       "subfieldPath": []
     },
     {
-      "field": "emails",
-      "header": "Views",
+      "field": "email",
+      "header": "Email",
       "subfieldPath": []
     },
     {
