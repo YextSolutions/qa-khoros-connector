@@ -75,11 +75,6 @@
       "subfieldPath": []
     },
     {
-      "field": "khoros_username",
-      "header": "Khoros Username",
-      "subfieldPath": []
-    },
-    {
       "field": "khoros_userFavicon",
       "header": "Khoros User Icon",
       "subfieldPath": [
