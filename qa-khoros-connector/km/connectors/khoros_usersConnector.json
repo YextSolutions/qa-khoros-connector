@@ -1,12 +1,11 @@
 {
   "$id": "khoros_usersConnector",
-  "$schema": "https://schema.yext.com/config/km/connector/v2",
+  "$schema": "https://schema.yext.com/config/km/connector/v3",
   "displayName": "Khoros Users Connector",
   "entityType": "khoros_user",
   "source": {
     "sourceConfig": {
       "apiPushConfig": {
-        "app": "241765",
         "dataFormat": "JSON",
         "enabled": true
       }
@@ -39,11 +38,6 @@
       },
       {
         "type": "JSON",
-        "header": "Khoros User Icon",
-        "path": "avatar.favicon"
-      },
-      {
-        "type": "JSON",
         "header": "First Name",
         "path": "first_name"
       },
@@ -54,15 +48,33 @@
       }
     ]
   },
+  "transforms": [
+    {
+      "addColumn": {
+        "newColumnHeader": "Entity ID Prefix",
+        "columnValue": "khorosUser_"
+      }
+    },
+    {
+      "mergeColumns": {
+        "inputHeaders": [
+          "Entity ID Prefix",
+          "Entity ID"
+        ],
+        "newColumnHeader": "Global Entity ID",
+        "delimiter": ""
+      }
+    }
+  ],
   "mappings": [
     {
-      "field": "entityId",
-      "header": "Entity ID",
+      "field": "emails",
+      "header": "Email",
       "subfieldPath": []
     },
     {
-      "field": "name",
-      "header": "Name",
+      "field": "firstName",
+      "header": "First Name",
       "subfieldPath": []
     },
     {
@@ -71,27 +83,18 @@
       "subfieldPath": []
     },
     {
-      "field": "emails",
-      "header": "Email",
-      "subfieldPath": []
-    },
-    {
-      "field": "khoros_userFavicon",
-      "header": "Khoros User Icon",
-      "subfieldPath": [
-        {
-          "name": "url"
-        }
-      ]
-    },
-    {
-      "field": "firstName",
-      "header": "First Name",
-      "subfieldPath": []
-    },
-    {
       "field": "lastName",
       "header": "Last Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "entityId",
+      "header": "Global Entity ID",
       "subfieldPath": []
     }
   ]

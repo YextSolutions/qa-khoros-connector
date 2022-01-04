@@ -1,12 +1,11 @@
 {
   "$id": "khoros_categoriesConnector",
-  "$schema": "https://schema.yext.com/config/km/connector/v2",
+  "$schema": "https://schema.yext.com/config/km/connector/v3",
   "displayName": "Khoros Categories Connector",
   "entityType": "khoros_category",
   "source": {
     "sourceConfig": {
       "apiPushConfig": {
-        "app": "241765",
         "dataFormat": "JSON",
         "enabled": true
       }
@@ -64,17 +63,28 @@
         },
         "inputFormat": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSXXX"
       }
+    },
+    {
+      "addColumn": {
+        "newColumnHeader": "Entity ID Prefix",
+        "columnValue": "khorosCategory_"
+      }
+    },
+    {
+      "mergeColumns": {
+        "inputHeaders": [
+          "Entity ID Prefix",
+          "Entity ID"
+        ],
+        "newColumnHeader": "Global Entity ID",
+        "delimiter": ""
+      }
     }
   ],
   "mappings": [
     {
-      "field": "entityId",
-      "header": "Entity ID",
-      "subfieldPath": []
-    },
-    {
-      "field": "name",
-      "header": "Name",
+      "field": "datePosted",
+      "header": "Creation Date",
       "subfieldPath": []
     },
     {
@@ -83,13 +93,13 @@
       "subfieldPath": []
     },
     {
-      "field": "landingPageUrl",
-      "header": "Landing Page",
+      "field": "description",
+      "header": "Description",
       "subfieldPath": []
     },
     {
-      "field": "description",
-      "header": "Description",
+      "field": "landingPageUrl",
+      "header": "Landing Page",
       "subfieldPath": []
     },
     {
@@ -98,8 +108,13 @@
       "subfieldPath": []
     },
     {
-      "field": "datePosted",
-      "header": "Creation Date",
+      "field": "name",
+      "header": "Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "entityId",
+      "header": "Global Entity ID",
       "subfieldPath": []
     }
   ]
