@@ -74,6 +74,22 @@
         "newColumnHeader": "Global Entity ID",
         "delimiter": ""
       }
+    },
+    {
+      "addColumn": {
+        "newColumnHeader": "Category ID Prefix",
+        "columnValue": "khorosCategory_"
+      }
+    },
+    {
+      "mergeColumns": {
+        "inputHeaders": [
+          "Category ID Prefix",
+          "Category ID"
+        ],
+        "newColumnHeader": "Global Category ID",
+        "delimiter": ""
+      }
     }
   ],
   "mappings": [
@@ -93,13 +109,13 @@
       "subfieldPath": []
     },
     {
-      "field": "landingPageUrl",
-      "header": "Landing Page",
+      "field": "entityId",
+      "header": "Global Entity ID",
       "subfieldPath": []
     },
     {
-      "field": "khoros_category",
-      "header": "Category ID",
+      "field": "landingPageUrl",
+      "header": "Landing Page",
       "subfieldPath": []
     },
     {
@@ -113,8 +129,8 @@
       "subfieldPath": []
     },
     {
-      "field": "entityId",
-      "header": "Global Entity ID",
+      "field": "khoros_category",
+      "header": "Global Category ID",
       "subfieldPath": []
     }
   ]

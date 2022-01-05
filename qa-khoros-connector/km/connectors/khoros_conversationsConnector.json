@@ -204,6 +204,22 @@
         "newColumnHeader": "Global Entity ID",
         "delimiter": ""
       }
+    },
+    {
+      "addColumn": {
+        "newColumnHeader": "Board ID Prefix",
+        "columnValue": "khorosBoard_"
+      }
+    },
+    {
+      "mergeColumns": {
+        "inputHeaders": [
+          "Board ID Prefix",
+          "Board"
+        ],
+        "newColumnHeader": "Global Board ID",
+        "delimiter": ""
+      }
     }
   ],
   "mappings": [
@@ -275,11 +291,6 @@
           "name": "postTime"
         }
       ]
-    },
-    {
-      "field": "khoros_board",
-      "header": "Board",
-      "subfieldPath": []
     },
     {
       "field": "khoros_discussionStyle",
@@ -360,6 +371,11 @@
       ]
     },
     {
+      "field": "entityId",
+      "header": "Global Entity ID",
+      "subfieldPath": []
+    },
+    {
       "field": "khoros_discussionThread",
       "header": "Khoros Discussion Thread Author URL",
       "subfieldPath": [
@@ -432,8 +448,8 @@
       ]
     },
     {
-      "field": "entityId",
-      "header": "Global Entity ID",
+      "field": "khoros_board",
+      "header": "Global Board ID",
       "subfieldPath": []
     }
   ]
