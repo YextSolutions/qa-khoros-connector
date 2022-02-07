@@ -1,0 +1,14 @@
+{
+  "$id": "khoros_board.default",
+  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+  "name": "Khoros Board-default",
+  "entityType": "khoros_board",
+  "fields": [
+    "landingPageUrl",
+    "description",
+    "khoros_depth",
+    "khoros_discussionStyle",
+    "khoros_category",
+    "khoros_views"
+  ]
+}

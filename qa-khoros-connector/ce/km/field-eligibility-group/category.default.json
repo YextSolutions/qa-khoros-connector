@@ -1,0 +1,13 @@
+{
+  "$id": "khoros_category.default",
+  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+  "name": "Khoros Category-default",
+  "entityType": "khoros_category",
+  "fields": [
+    "datePosted",
+    "landingPageUrl",
+    "description",
+    "khoros_depth",
+    "khoros_views"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$id": "khoros_conversation.default",
+  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+  "name": "Khoros Conversation-default",
+  "entityType": "khoros_conversation",
+  "fields": [
+    "khoros_discussionLandingPage",
+    "khoros_discussionStyle",
+    "khoros_firstKhorosMessage",
+    "khoros_board",
+    "khoros_discussionThread",
+    "khoros_lastPostTime",
+    "khoros_messageCount",
+    "khoros_solution",
+    "khoros_solved"
+  ]
+}
