@@ -1,50 +1,7 @@
 {
   "$id": "khoros_board",
-  "$schema": "https://schema.yext.com/config/km/entity-type/v1",
+  "$schema": "https://schema.yext.com/config/km/entity-type/v2",
   "description": "",
   "displayName": "Khoros Board",
-  "enabled": true,
-  "field": [
-    {
-      "id": "landingPageUrl",
-      "required": false
-    },
-    {
-      "id": "description",
-      "required": false
-    },
-    {
-      "id": "name",
-      "required": true
-    },
-    {
-      "id": "khoros_depth",
-      "required": false
-    },
-    {
-      "id": "khoros_discussionStyle",
-      "required": false
-    },
-    {
-      "id": "khoros_category",
-      "required": false
-    },
-    {
-      "id": "khoros_views",
-      "required": false
-    },
-    {
-      "id": "folder",
-      "required": false
-    },
-    {
-      "id": "labels",
-      "required": false
-    },
-    {
-      "id": "entityId",
-      "required": true
-    }
-  ],
   "pluralDisplayName": "Khoros Boards"
 }
