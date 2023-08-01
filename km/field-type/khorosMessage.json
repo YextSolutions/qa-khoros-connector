@@ -6,7 +6,7 @@
         "structType": {
             "property": [
                 {
-                    "name": "body",
+                    "name": "bodyV2",
                     "displayName": "Body",
                     "isRequired": false,
                     "typeId": "markdown",
