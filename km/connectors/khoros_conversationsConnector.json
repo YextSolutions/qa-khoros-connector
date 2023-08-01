@@ -367,6 +367,9 @@
       "subfieldPath": [
         {
           "name": "body"
+        },
+                {
+          "name": "markdown"
         }
       ]
     },
@@ -390,6 +393,9 @@
       "subfieldPath": [
         {
           "name": "body"
+        },
+                {
+          "name": "markdown"
         }
       ]
     },
@@ -399,6 +405,9 @@
       "subfieldPath": [
         {
           "name": "body"
+        },
+                {
+          "name": "markdown"
         }
       ]
     },
